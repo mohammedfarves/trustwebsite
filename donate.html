@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Now - BSET</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .donation-card {
+            @apply p-4 border rounded-md text-center cursor-pointer transition-colors duration-200;
+        }
+        .donation-card.active {
+            @apply border-blue-600 bg-blue-50 text-blue-800;
+        }
+        .tab-button {
+            @apply px-4 py-2 text-lg font-semibold border-b-2;
+        }
+        .tab-button.active {
+            @apply border-blue-600 text-blue-700;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="./img/trust.png" alt="BSET Trust Logo" class="w-12 h-auto">
+                <div class="flex flex-col hidden sm:flex text-sm">
+                    <span class="text-orange-500 font-bold">Bharathama Social &</span>
+                    <span class="text-green-500 font-bold">Educational Trust</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm">
+                <a href="index.html" class="text-gray-600 hover:text-blue-700">Home</a>
+                <a href="aboutus.html" class="text-gray-600 hover:text-blue-700">About Us</a>
+                <a href="visionmision.html" class="text-gray-600 hover:text-blue-700">Vision & Mission</a>
+                <a href="programs.html" class="text-gray-600 hover:text-blue-700">Programs</a>
+                <a href="csr.html" class="text-gray-600 hover:text-blue-700">CSR & Partnerships</a>
+                <a href="gallary.html" class="text-gray-600 hover:text-blue-700">Gallery</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-700">Contact</a>
+            </nav>
+            <a href="donate.html">
+                <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-md">
+                    Donate Now
+                </button>
+            </a>
+            <div class="md:hidden">
+                <i class="fas fa-bars text-gray-800 text-2xl"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-16 bg-gray-50 text-center">
+            <div class="container mx-auto px-6">
+                <div class="mb-12">
+                    <h1 class="text-4xl font-bold mb-2">Make a Donation</h1>
+                    <p class="text-xl text-gray-600">Your contribution helps us create lasting change in communities</p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 text-left">
+                        <div>
+                            <h2 class="text-2xl font-semibold mb-6">Choose Donation Amount</h2>
+                            <div class="flex mb-6">
+                                <button class="tab-button active">One-time</button>
+                                <button class="tab-button">Monthly</button>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <label class="donation-card">
+                                    <input type="radio" name="amount" value="500" class="hidden">
+                                    <span class="block text-2xl font-bold mb-1">₹500</span>
+                                    <span class="text-gray-600">Education Kit</span>
+                                </label>
+                                <label class="donation-card">
+                                    <input type="radio" name="amount" value="1000" class="hidden">
+                                    <span class="block text-2xl font-bold mb-1">₹1,000</span>
+                                    <span class="text-gray-600">Medical Aid</span>
+                                </label>
+                                <label class="donation-card">
+                                    <input type="radio" name="amount" value="2500" class="hidden">
+                                    <span class="block text-2xl font-bold mb-1">₹2,500</span>
+                                    <span class="text-gray-600">Skill Training</span>
+                                </label>
+                                <label class="donation-card">
+                                    <input type="radio" name="amount" value="5000" class="hidden">
+                                    <span class="block text-2xl font-bold mb-1">₹5,000</span>
+                                    <span class="text-gray-600">Community Project</span>
+                                </label>
+                            </div>
+                            <div class="mt-6">
+                                <h3 class="font-semibold mb-2">Custom Amount</h3>
+                                <div class="relative">
+                                    <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">₹</span>
+                                    <input type="number" placeholder="Enter amount" class="w-full pl-8 py-2 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200">
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <h3 class="font-semibold mb-2">Support Program</h3>
+                                <select class="w-full py-2 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200">
+                                    <option>Where most needed</option>
+                                    <option>Education & Literacy</option>
+                                    <option>Healthcare Services</option>
+                                    <option>Women Empowerment</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2 class="text-2xl font-semibold mb-6">Donor Information</h2>
+                            <form class="space-y-4">
+                                <div>
+                                    <label for="d_firstName" class="block text-sm font-medium text-gray-700">First Name*</label>
+                                    <input type="text" id="d_firstName" name="d_firstName" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200">
+                                </div>
+                                <div>
+                                    <label for="d_lastName" class="block text-sm font-medium text-gray-700">Last Name*</label>
+                                    <input type="text" id="d_lastName" name="d_lastName" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200">
+                                </div>
+                                <div>
+                                    <label for="d_email" class="block text-sm font-medium text-gray-700">Email Address*</label>
+                                    <input type="email" id="d_email" name="d_email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200">
+                                </div>
+                                <div>
+                                    <label for="d_phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                                    <input type="tel" id="d_phone" name="d_phone" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200">
+                                </div>
+                                <div>
+                                    <label for="pan" class="block text-sm font-medium text-gray-700">PAN Number (for 80G receipt)</label>
+                                    <input type="text" id="pan" name="pan" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-md text-lg">
+                            Proceed to Payment
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center text-gray-600">
+                    <h2 class="text-xl font-semibold mb-4">Tax Benefits & Transparency</h2>
+                    <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 mb-4">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-file-invoice text-blue-600 text-xl"></i>
+                            <span>80G tax exemption certificate provided</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-lock text-green-600 text-xl"></i>
+                            <span>100% fund utilization transparency</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2 text-gray-400 text-sm">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secured by 256-bit SSL encryption</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+            <img src="./img/trust.png" alt="BSET Trust Logo" class="w-16 h-auto mb-4">
+            <p class="text-gray-400 mb-4">Bharathama Social and Educational Trust - Empowering communities and transforming lives through education, healthcare, and social development.</p>
+            <div class="flex space-x-4 text-2xl">
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div>
+            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+                <li><a href="aboutus.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                <li><a href="visionmision.html" class="text-gray-400 hover:text-white">Vision & Mission</a></li>
+                <li><a href="programs.html" class="text-gray-400 hover:text-white">Our Programs</a></li>
+                <li><a href="gallary.html" class="text-gray-400 hover:text-white">Gallery</a></li>
+                <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-xl font-bold mb-4">Programs</h3>
+            <ul class="space-y-2">
+                <li><a href="siteconstruction.html" class="text-gray-400 hover:text-white">Education & Literacy</a></li>
+                <li><a href="siteconstruction.html" class="text-gray-400 hover:text-white">Healthcare Services</a></li>
+                <li><a href="siteconstruction.html" class="text-gray-400 hover:text-white">Women Empowerment</a></li>
+                <li><a href="siteconstruction.html" class="text-gray-400 hover:text-white">Community Development</a></li>
+                <li><a href="siteconstruction.html" class="text-gray-400 hover:text-white">Environmental Conservation</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+            <p class="text-gray-400">Chennai, Tamilnadu</p>
+            <p class="text-gray-400">+91 9962554922</p>
+            <p class="text-gray-400">support@ebat.in</p>
+            <a href="donate.html">
+                <button class="mt-6 bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-md">
+                    Donate Now
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="container mx-auto px-6 mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+        <p>&copy; 2024 Bharathama Social and Educational Trust. All rights reserved.</p>
+        <ul class="flex space-x-6 mt-4 md:mt-0">
+            <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white">80G Certificate</a></li>
+            <li><a href="#" class="hover:text-white">Annual Reports</a></li>
+        </ul>
+    </div>
+</footer>
+
+    <script>
+        // JavaScript for tab functionality
+        const tabs = document.querySelectorAll('.tab-button');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active', 'border-blue-600', 'text-blue-700'));
+                tab.classList.add('active', 'border-blue-600', 'text-blue-700');
+            });
+        });
+
+        // JavaScript for radio button selection
+        const radioButtons = document.querySelectorAll('input[name="amount"]');
+        radioButtons.forEach(radio => {
+            const label = radio.closest('label');
+            radio.addEventListener('change', () => {
+                document.querySelectorAll('.donation-card').forEach(card => card.classList.remove('active'));
+                if (radio.checked) {
+                    label.classList.add('active');
+                }
+            });
+        });
+
+
+    const header = document.getElementById('main-header');
+
+    window.addEventListener('scroll', () => {
+        // Check if the user has scrolled past 50 pixels
+        if (window.scrollY > 50) {
+            // If so, make the header semi-transparent and add the blur effect
+            header.classList.remove('bg-transparent', 'shadow-none');
+            header.classList.add('bg-white/80', 'backdrop-blur-md', 'shadow-sm');
+        } else {
+            // Otherwise, make it transparent with no blur
+            header.classList.remove('bg-white/80', 'backdrop-blur-md', 'shadow-sm');
+            header.classList.add('bg-transparent', 'shadow-none');
+        }
+    });
+
+    </script>
+</body>
+</html>
